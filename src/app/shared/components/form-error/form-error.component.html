@@ -1,0 +1,7 @@
+<div *ngIf="errors.length > 0">
+  <ng-container *ngFor="let error of errors">
+    <ng-container *ngFor="let item of error | keyvalue" >
+      <p *ngIf="item.key == fieldName" class="text-danger">{{ item.value }}</p>
+    </ng-container>
+  </ng-container>
+</div> 

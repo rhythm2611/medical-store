@@ -1,0 +1,68 @@
+<div class="container">
+  <h2 class="text-center">Register</h2>
+  <div class="col-md-9 col-md-offset-3">
+    <form ngForm #f="ngForm" (ngSubmit)=register(f)>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input ngModel name="name" #name="ngModel" type="text" class="form-control" id="name" placeholder="Enter name"
+          required>
+        <div *ngIf="name.touched && name.invalid">
+          <p class="text-danger" *ngIf="name.errors.required">name is required</p>
+        </div>
+        <div>
+        <server-form-error *ngIf="errors.length > 0" [errors]="errors" [fieldName] = "name.name"></server-form-error>
+        
+
+        </div>
+      </div>
+      <!-- <div class="form-group">
+      <label for="username">Username</label>
+      <input ngModel name="username" #uname="ngModel" type="text" class="form-control" id="username" placeholder="Enter username" required minlength="5" maxlength="20" cannotContainSpace alphaNumeric>
+      <div *ngIf="uname.touched && uname.invalid">
+        <p class="text-danger" *ngIf="uname.errors.required">username is required</p>
+        <p class="text-danger" *ngIf="uname.errors.minlength">{{ uname.errors.minlength.requiredLength -  uname.errors.minlength.actualLength}} charater required</p>
+        <p class="text-danger" *ngIf="uname.errors.maxlength">Maximum {{ uname.errors.maxlength.requiredLength }} charater allowed</p>
+        <p class="text-danger" *ngIf="uname.errors.cantBeSpace">Space is not allowed</p>
+        <p class="text-danger" *ngIf="uname.errors.alphaNumeric">username should be alphanumeric</p>
+      </div>
+    </div> -->
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input ngModel name="email" #email="ngModel" type="email" class="form-control" id="email"
+          aria-describedby="emailHelp" placeholder="Enter email" required isEmailExists validEmail>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div *ngIf="email.touched && email.invalid">
+          <p class="text-danger" *ngIf="email.errors.required">email is required</p>
+          <p class="text-danger" *ngIf="email.errors.validEmail">valid email is required</p>
+          <p class="text-danger" *ngIf="email.errors.isEmailExists">email has already taken</p>
+        </div>
+        <server-form-error *ngIf="errors.length > 0" [errors]="errors" [fieldName] = "email.name"></server-form-error>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input ngModel name="password" #password="ngModel" type="password" class="form-control" id="password"
+          placeholder="Password" required minlength="5" maxlength="18">
+        <div *ngIf="password.touched && password.invalid">
+          <p class="text-danger" *ngIf="password.errors.required">password is required</p>
+          <p class="text-danger" *ngIf="password.errors.minlength">
+            {{ password.errors.minlength.requiredLength -  password.errors.minlength.actualLength}} charater required
+          </p>
+          <p class="text-danger" *ngIf="password.errors.maxlength">Maximum
+            {{ password.errors.maxlength.requiredLength }} charater allowed</p>
+        </div>
+        <server-form-error *ngIf="errors.length > 0" [errors]="errors" [fieldName] = "password.name"></server-form-error>
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input ngModel name="confirm_password" #confirm_password="ngModel" type="password" class="form-control"
+          id="confirm_password" placeholder="Confirm Password" required isMatched="password">
+        <div *ngIf="confirm_password.touched && confirm_password.invalid">
+          <p class="text-danger" *ngIf="confirm_password.errors.required">confirm password is required</p>
+          <p class="text-danger" *ngIf="confirm_password.errors.isMatched">password & confirm password should match</p>
+        </div>
+        <server-form-error *ngIf="errors.length > 0" [errors]="errors" [fieldName] = "confirm_password.name"></server-form-error>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Register</button>
+    </form>
+  </div>
+</div>
