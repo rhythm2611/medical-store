@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev" : "ng serve --port=5200 -o",
+    "staging" : "ng serve --configuration=staging --port=5200 -o",
     "prod" : "ng serve --prod",
     "deploy:gh" : "ng build --prod --base-href /medical-store/ && ngh --dir dist/ng-curd"
   },

@@ -53,6 +53,14 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
             }
           }
         },
@@ -64,6 +72,9 @@
           "configurations": {
             "production": {
               "browserTarget": "ng-curd:build:production"
+            },
+            "staging": {
+              "browserTarget": "ng-curd:build:staging"
             }
           }
         },

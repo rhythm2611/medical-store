@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class NavbarComponent implements OnInit {
 
-  envMode : string = environment.production ? 'prod' : 'dev'
+  envMode : string = environment.environmentName
   constructor(public authService : AuthService, private alertService : AlertService, private router: Router) { }
 
   ngOnInit() {
