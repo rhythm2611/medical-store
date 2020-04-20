@@ -6,9 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `npm run dev` for a dev server. Navigate to `http://localhost:5200/`. The app will automatically reload if you change any of the source files.
 
-## Development server
+## Staging server
 
-Run `npm run staging` for a dev server. Navigate to `http://localhost:5200/`. You can see all changes on that url. This settings will connect with server backend setting.
+Run `npm run staging` for a staging server. Navigate to `http://localhost:5200/`. You can see all changes on that url. This settings will connect with staging backend setting.
 
 ## Deploy all Changes in prod mode directly
 
