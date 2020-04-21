@@ -10,6 +10,6 @@ Run `npm run dev` for a dev server. Navigate to `http://localhost:5200/`. The ap
 
 Run `npm run staging` for a staging server. Navigate to `http://localhost:5200/`. You can see all changes on that url. This settings will connect with staging backend setting.
 
-## Deploy all Changes in prod mode directly
+## Deploy all changes in production server
 
-Run `npm run deploy:gh` for a dev server. Navigate to `https://rhythm2611.github.io/medical-store`. You can see all changes on that url
+Run `npm run deploy:gh` for a production server. Navigate to `https://rhythm2611.github.io/medical-store`. You can see all changes on that url
