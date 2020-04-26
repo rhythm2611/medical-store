@@ -1,0 +1,36 @@
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+header img{
+    height: 30px;
+}
+.navbar-brand
+{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.navbar-left
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    order: 1;
+    width: 185px;
+    flex: 1;
+}
+.navbar-right
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    order: 2;
+    width: 240px;
+    flex: 1;
+}

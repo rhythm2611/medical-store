@@ -8,10 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev" : "ng serve --port=5200 -o",
-    "staging" : "ng serve --configuration=staging --port=5200 -o",
-    "prod" : "ng serve --prod",
-    "deploy:gh" : "ng build --prod --base-href /medical-store/ && ngh --dir dist/ng-curd"
+    "dev": "ng serve --port=5200 -o",
+    "staging": "ng serve --configuration=staging --port=5200 -o",
+    "prod": "ng serve --prod",
+    "deploy:gh": "ng build --prod --base-href /medical-store/ && ngh --dir dist/ng-curd"
   },
   "private": true,
   "dependencies": {
@@ -23,7 +23,7 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
-    "@ng-bootstrap/ng-bootstrap": "^6.0.1",
+    "@ng-bootstrap/ng-bootstrap": "^4.2.2",
     "bootstrap": "^4.4.1",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
