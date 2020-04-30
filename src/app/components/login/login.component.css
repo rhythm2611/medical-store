@@ -1,0 +1,19 @@
+.blue-login-bg {
+    background: #596882;
+    padding: 30px 25px 15px;
+}
+.content {
+    padding: 35px 20px;
+}
+@media (min-width: 992px){
+.content {
+    padding: 60px;
+}
+
+}
+
+.text-danger {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+}

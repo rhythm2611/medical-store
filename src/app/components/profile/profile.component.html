@@ -1,4 +1,32 @@
-<p>{{ userDetails?.id }}</p>
-<p>{{ userDetails?.name }}</p>
-<p>{{ userDetails?.email }}</p>
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
 
+<div class="page-wrapper">
+    <div class="page-header">
+        <h4 class="page-title mb-0">Profile</h4>
+    </div>
+    <div class="page-content">
+        <div class="form-fields">
+            <div class="row">
+                <div class="col-sm-6">
+                    <table class="table table-striped table-bordered" cellspacing="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <th>User ID</th>
+                                <td>{{ userDetails?.id }}</td>
+                            </tr>
+                            <tr>
+                                <th>User Name</th>
+                                <td>{{ userDetails?.name }}</td>
+                            </tr>
+                            <tr>
+                                <th>User Email</th>
+                                <td>{{ userDetails?.email }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

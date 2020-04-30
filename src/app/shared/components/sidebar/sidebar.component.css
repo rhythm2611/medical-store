@@ -1,0 +1,86 @@
+.filemgr-sidebar {
+    background: #124540;
+    width: 185px;
+    float: left;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 56px;
+}
+.nav-sidebar
+{
+    padding: 10px;
+}
+.nav-sidebar li{
+    position: relative;
+    cursor: pointer;
+}
+.nav-sidebar .nav-link {
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 0.25rem;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+.nav-sidebar .nav-link svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2.3px;
+    margin-right: 12px;
+    color: #fff;
+    fill: rgba(27, 46, 75, 0.06);
+}
+.nav-sidebar .nav-link:hover, .nav-sidebar .nav-link:focus, .nav-sidebar .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.30);
+}
+
+.menu-dropdown
+{
+    list-style: circle;
+    left: 0;
+    color: #fff;
+    padding: 10px 18px 10px 34px;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.14);
+    top: 100%;
+    z-index: 99;
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+    -webkit-transition: all 0.06s ease 0s;
+    transition: all 0.06s ease 0s;
+}
+.show .menu-dropdown
+{
+    position: relative;
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+._navtoggle:before {
+    position: absolute;
+    top: 16px;
+    right: 11px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    margin-top: -4px;
+    content: "";
+    background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMSAxNCc+PHBhdGggZmlsbD0nIzczODE4ZicgZD0nTTkuMTQ4IDIuMzUybC00LjE0OCA0LjE0OCA0LjE0OCA0LjE0OHEwLjE0OCAwLjE0OCAwLjE0OCAwLjM1MnQtMC4xNDggMC4zNTJsLTEuMjk3IDEuMjk3cS0wLjE0OCAwLjE0OC0wLjM1MiAwLjE0OHQtMC4zNTItMC4xNDhsLTUuNzk3LTUuNzk3cS0wLjE0OC0wLjE0OC0wLjE0OC0wLjM1MnQwLjE0OC0wLjM1Mmw1Ljc5Ny01Ljc5N3EwLjE0OC0wLjE0OCAwLjM1Mi0wLjE0OHQwLjM1MiAwLjE0OGwxLjI5NyAxLjI5N3EwLjE0OCAwLjE0OCAwLjE0OCAwLjM1MnQtMC4xNDggMC4zNTJ6Jy8+PC9zdmc+);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transition: transform .3s;
+    transform: rotate(180deg);
+}
+._navtoggle.show:before
+{
+    transform: rotate(270deg);
+}

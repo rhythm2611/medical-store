@@ -1,0 +1,109 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+<div class="page-wrapper">
+  <div class="page-header">
+      <h4 class="page-title mb-0">Add New Customer</h4>
+      <div>
+        <!-- <a class="btn btn-info text-uppercase" routerLink="add">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add
+        </a> -->
+        <a  routerLink="/customer" class="btn btn-sm pd-x-15 btn-uppercase mg-l-5">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 512 512" xml:space="preserve" class="icon icon-sm"><path d="M455.2 9.2L256 208.4 56.8 9.2C44.5-3.1 24.6-3.1 12.2 9.2l-2.9 2.9C-3 24.4-3 44.4 9.3 56.7L208.4 256 9.2 455.2c-12.3 12.3-12.3 32.3 0 44.6l2.9 2.9c12.3 12.3 32.3 12.3 44.6 0L256 303.6l199.2 199.2c12.3 12.3 32.3 12.3 44.6 0l2.9-2.9c12.3-12.3 12.3-32.3 0-44.6L303.6 256 502.8 56.8c12.3-12.3 12.3-32.3 0-44.6l-2.9-2.9c-12.5-12.4-32.4-12.4-44.7-.1z"></path></svg>
+        </a>
+    </div>
+  </div>
+  <div class="page-content grey-bg">
+    <div class="form-fields w-60">
+      <form>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Business Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control">
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+            <label >Password</label>
+            <input type="password" class="form-control" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            <input type="text" class="form-control" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+            <label>Address 2</label>
+            <textarea class="form-control" rows="2" placeholder="Add notes"></textarea>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label>Select</label>
+                <select class="custom-select">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="form-group col-md-6">
+              <label>Choose File</label>
+              <div class="custom-file">
+                  <input type="file" class="custom-file-input" (change)="handlefileInput($event.target.files)">
+                  <label class="custom-file-label">Choose file</label>
+              </div>
+          </div>
+          <div class="form-group col-md-6">
+              <label>Preview File</label>
+              <div class="img-preview">
+                  <img [src]="imageUrl" height="200px">
+              </div>
+          </div>
+      </div>
+
+        <div class="form-group row mt-20">
+            <label class="col-form-label col-sm-2 pt-0">Gender</label>
+            <div class="col-sm-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" name="customRadio" id="customRadio1" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="customRadio1">First radio</label>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" name="customRadio" id="customRadio2" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio2">Second radio</label>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="custom-control custom-radio">
+                    <input type="radio" name="customRadio" id="customRadio3" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio3">Third radio</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1">Agree with Terms of Use and Privacy Policy</label>
+            </div>
+        </div>
+        <button class="btn btn-light mr-10" type="cancel">Discard</button>
+        <button type="submit" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

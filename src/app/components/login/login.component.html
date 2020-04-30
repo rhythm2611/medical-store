@@ -1,27 +1,43 @@
-<div class="container">
-  <h2 class="text-center">Login</h2>
-  <div class="col-md-9 col-md-offset-3">
-    <form ngForm #f="ngForm" (ngSubmit)=login(f)>
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input ngModel name="email" #email="ngModel" type="email" class="form-control" id="email"
-          aria-describedby="emailHelp" placeholder="Enter email" required validEmail>
-        <div *ngIf="email.touched && email.invalid">
-          <p class="text-danger" *ngIf="email.errors.required">email is required</p>
-          <p class="text-danger" *ngIf="email.errors.validEmail">valid email is required</p>
+
+
+  <div class="content">
+    <div class="container">
+      <div class="media align-items-stretch justify-content-center pos-relative">
+        
+        <div class="sign-wrapper">
+          <div class="login-part mb-20">
+            <div class="blue-login-bg">
+              <h3 class="tx-white mb-5">Sign In</h3>
+              <p class="tx-white tx-16">Welcome back! Please signin to continue.</p>
+            </div>
+            <div class="pl-30 pt-20 pr-30 pb-20">
+              <form ngForm #f="ngForm" (ngSubmit)=login(f)>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input ngModel name="email" #email="ngModel" type="email" class="form-control" id="email"
+                    aria-describedby="emailHelp" placeholder="Enter email" required validEmail>
+                  <div *ngIf="email.touched && email.invalid">
+                    <p class="text-danger" *ngIf="email.errors.required">email is required</p>
+                    <p class="text-danger" *ngIf="email.errors.validEmail">valid email is required</p>
+                  </div>
+                  <server-form-error *ngIf="errors.length > 0" [errors]="errors" [fieldName] = "email.name"></server-form-error>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input ngModel name="password" #password="ngModel" type="password" class="form-control" id="password"
+                    placeholder="Password" required>
+                  <div *ngIf="password.touched && password.invalid">
+                    <p class="text-danger" *ngIf="password.errors.required">password is required</p>
+                  </div>
+                  <server-form-error *ngIf="errors.length > 0" [errors]="errors" [fieldName] = "password.name"></server-form-error>
+                </div>
+                <button type="submit" class="btn btn-info btn-block" [disabled]="f.invalid">Login</button>
+              </form>
+            </div>
+            
+          </div>
+          <p>New Member?<a routerLink="/register" class="pl-10">Click to Register</a></p>
         </div>
-        <server-form-error *ngIf="errors.length > 0" [errors]="errors" [fieldName] = "email.name"></server-form-error>
       </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input ngModel name="password" #password="ngModel" type="password" class="form-control" id="password"
-          placeholder="Password" required>
-        <div *ngIf="password.touched && password.invalid">
-          <p class="text-danger" *ngIf="password.errors.required">password is required</p>
-        </div>
-        <server-form-error *ngIf="errors.length > 0" [errors]="errors" [fieldName] = "password.name"></server-form-error>
-      </div>
-      <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Login</button>
-    </form>
+    </div>
   </div>
-</div>
