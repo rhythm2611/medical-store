@@ -16,7 +16,6 @@ import { CustomerComponent } from './views/customer/customer.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { AddComponent } from './views/customer/add/add.component';
 import { NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
-//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -35,7 +34,6 @@ import { NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    //NgbModule,
     SharedModule.forRoot(),
     NgbTypeaheadModule.forRoot(),
   ],
