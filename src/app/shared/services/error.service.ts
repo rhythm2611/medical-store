@@ -9,11 +9,12 @@ export class ErrorService {
 
   constructor() { }
 
-  getClientErrorMessage(error: Error): string {    
+  getClientErrorMessage(error: Error): string {  
     return error.message ? error.message : error.toString();
   }
 
   getServerErrorMessage(error: HttpErrorResponse): string {
+  
     let message : string = error.error.msg
     if(typeof message !== 'undefined' && message != null){
       message = error.error.msg

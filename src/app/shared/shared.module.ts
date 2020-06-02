@@ -9,7 +9,6 @@ import { FormErrorComponent } from './components/form-error/form-error.component
 import { sharedProviders } from './services';
 import { CannotSpaceDirective, ValidEmailDirective, CheckEmailDirective, CompareDirective, AlphaNumericDirective } from './validators/common.validators';
 import { NavbarComponent } from './components/navbar/navbar.component';
-//import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -21,8 +20,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ValidEmailDirective,
     CheckEmailDirective,
     CompareDirective,
-    AlphaNumericDirective,
-    //SidebarComponent
+    AlphaNumericDirective
   ],
   imports: [
     CommonModule,
@@ -39,7 +37,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CompareDirective,
     AlphaNumericDirective,
     NgbModule
-    //SidebarComponent
   ]
 })
 export class SharedModule { 

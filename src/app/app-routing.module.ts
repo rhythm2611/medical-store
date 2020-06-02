@@ -4,9 +4,9 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuardService } from './services/guards/auth-guard.service';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { CustomerComponent } from './views/customer/customer.component';
-import { AddComponent } from './views/customer/add/add.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CustomerComponent } from './components/customer/customer.component';
+import { AddComponent } from './components/customer/add/add.component';
 
 const routes: Routes = [
   {path : '', component : LoginComponent},

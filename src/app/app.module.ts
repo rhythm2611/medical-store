@@ -11,11 +11,12 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { httpInterceptorProviders } from './services/interceptors';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { CustomerComponent } from './views/customer/customer.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CustomerComponent } from './components/customer/customer.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
-import { AddComponent } from './views/customer/add/add.component';
+import { AddComponent } from './components/customer/add/add.component';
 import { NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
+import { CustomerFilterPipe } from './pipes/customer-filter.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
     DashboardComponent,
     CustomerComponent,
     SidebarComponent,
-    AddComponent
+    AddComponent,
+    CustomerFilterPipe
   ],
   imports: [
     BrowserModule,

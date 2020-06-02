@@ -21,3 +21,13 @@ export interface LoogedUserPayload {
     email: string;
     created_at: string;
 }
+export interface CustomerPayload {
+    id: number,
+    name: string,
+    phone: string,
+    address: string,
+    age: number,
+    sex: boolean,
+    email: string,
+    created_at : string
+  }
